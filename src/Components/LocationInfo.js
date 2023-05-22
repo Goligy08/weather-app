@@ -18,6 +18,7 @@ const LocationInfo = (props) => {
     return (
         <div className="location-info">
             <div className="date-time">
+                
             <h2>Weather Now</h2>
             <h3><span>Today, {day} {date} {month}  {hour}:{min}</span></h3>
        
@@ -30,7 +31,7 @@ const LocationInfo = (props) => {
             </div>
 
             <div className="temperature">
-            <h1><span>{props.temperature}•</span></h1>
+            <h1><span>{props.temperature}</span></h1>
             </div>
         </div>
     )

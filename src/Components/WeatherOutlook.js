@@ -11,26 +11,30 @@ const WeatherOutlook = (props) => {
     return (
         <div className="weather-outlook">
          <h2>Weather Outlook</h2>
+          
+           
+            <div className="glyph-container">
 
-         <div className="glyph-container">
-
-         <div className="info-glyph">
-            
-            <span>{props.feels}•</span>
-            <h4>Feels like</h4>
-         </div>
-
-         <div className="info-glyph">
-            <span>{props.humidity}%</span>
-            <h4>Humidity</h4>
-         </div>
-
-         <div className="info-glyph">
-            <span>{props.wind}</span>
-            <h4>Wind Speed</h4>
-         </div>
-	
-         </div>
+            <div className="info-glyph">
+               
+               <span>{props.feels}•</span>
+               <h4>Feels like</h4>
+            </div>
+   
+            <div className="info-glyph">
+               <span>{props.humidity}%</span>
+               <h4>Humidity</h4>
+            </div>
+   
+            <div className="info-glyph">
+               <span>{props.wind}</span>
+               <h4>Wind Speed</h4>
+            </div>
+      
+            </div>
+          
+          
+       
        
 
         </div>
