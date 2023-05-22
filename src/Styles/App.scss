@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+   background-color: #E0E2E7;
+   
+    //background-color: #F1F1F2;
+    position: relative ;
+  
+
+    .app-title{
+        font-family: 'Syncopate', sans-serif;
+        font-weight: 600;
+        color: rgb(67, 79, 93);
+        font-size: 2rem;
+        margin: 2% 0 0 35%;
+    }
+}
