@@ -27,7 +27,7 @@ const WeatherOutlook = (props) => {
             </div>
    
             <div className="info-glyph">
-               <span>{props.wind}</span>
+               <span>{props.wind}<p>mph</p></span>
                <h4>Wind Speed</h4>
             </div>
       
