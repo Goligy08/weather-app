@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 import "../Styles/WeatherApp.scss";
 import LocationInfo from "./LocationInfo";
 import WeatherOutlook from "./WeatherOutlook";
+import WeatherImage from "./WeatherImage";
 
 
 const WeatherCard = () => {
 
     const [weather, setWeather] = useState({});
     const [location, setLocation] = useState('')
+    const [image, setImage] = useState('')
     
 
     useEffect(() => {
@@ -24,10 +26,13 @@ const WeatherCard = () => {
         const api = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=0bb00caf659cfc4be196c1ede0690a3c`);
         const data = await api.json();
         setWeather(data)
+        console.log(data)
         console.log(location)
         
 
     }
+
+   
     return(
         <div className="weather-card">
             
@@ -40,6 +45,8 @@ const WeatherCard = () => {
                  placeholder="Enter a city" 
                    >
                 </input>
+
+               
              </form>
              
             
@@ -51,7 +58,13 @@ const WeatherCard = () => {
                temperature = {weather.main ? Math.round(weather.main.temp) + '•': null} 
             
             
-            />   
+            />  
+        
+             
+             <WeatherImage
+               imageCode = {weather.weather ? weather.weather[0].icon : null}
+             />
+             
             {weather.name != undefined && 
               <WeatherOutlook
                
